@@ -1,0 +1,25 @@
+1. Zip version 8 Files and Upload Them
+1.1 Update index.php for membership
+2. Upload Installer in Abhinav Software
+3. Create a Demo Site
+4. Rename it to membershipdemo.epapercms.com
+5. Upgrade it to new version
+
+6. Create Accounts for 
+	- Navjyoti
+	- Journal wale ka
+	- BD ka
+	- Asomyapratidin
+
+Todo in Version 8
+--------------
+1) swap navigation
+2) social media login
+3) Add Ecommerce settings in Wizard
+j) Option to disable activation system 
+k) Default Test Gateway Details and Test Card details in settings page
+6) Subscription Reminder ka algorithm check karna hai (cache ke jariye use 2 ya 3 bar hi fire karwana hai)
+9) Auto delete
+
+ 
+

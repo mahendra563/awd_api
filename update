@@ -1,0 +1,49 @@
+File Uploading Modification
+=================
+
+Create folder Uploads in webroot
+
+Update the following files:
+/home/ankurgupta/Server/websites/projects.nginx/ghatna/pms/application/models/Project.php
+/home/ankurgupta/Server/websites/projects.nginx/ghatna/pms/application/components/MediaManager.php
+
+
+Execute the following SQL in database
+
+ALTER TABLE `projects` 
+ADD COLUMN `proj_file` VARCHAR(255) NOT NULL AFTER `proj_lasttaskdate`;
+
+CREATE TABLE `project_files` (
+  `file_id` int NOT NULL AUTO_INCREMENT,
+  `file_title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `file_path` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `file_date` datetime NOT NULL,
+  `proj_id` int NOT NULL,
+  PRIMARY KEY (`file_id`),
+  KEY `fk_project_files_1_idx` (`proj_id`),
+  CONSTRAINT `fk_project_files_1` FOREIGN KEY (`proj_id`) REFERENCES `projects` (`proj_id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+
+
+
+=============
+
+
+Negative Work Done
+application/controllers/admin/ProjectTaskController.php
+application/models/WorkDone.php
+
+
+
+
+
+
+
+=============
+
+ALTER TABLE `projects_ghatna_pms`.`employees` 
+ADD COLUMN `emp_status` VARCHAR(45) NOT NULL DEFAULT 'Present' AFTER `emp_fullname`;
+
+ALTER TABLE `pms`.`old_work` 
+CHANGE COLUMN `emp_id` `emp_id` INT NOT NULL DEFAULT 0 ;

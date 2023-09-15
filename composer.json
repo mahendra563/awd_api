@@ -1,0 +1,6 @@
+{
+    "require": {
+        "dompdf/dompdf": "^0.8.4",
+        "fzaninotto/faker": "^1.9"
+    }
+}

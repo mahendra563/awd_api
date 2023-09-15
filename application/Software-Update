@@ -1,0 +1,4 @@
+ALTER TABLE `projects` 
+ADD COLUMN `proj_cost` DECIMAL(10,2) NOT NULL AFTER `proj_file`,
+CHANGE COLUMN `proj_creation_date` `proj_creation_date` DATE NOT NULL ;
+
